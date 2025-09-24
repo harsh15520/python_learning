@@ -110,6 +110,3 @@ for i in range(5):
 - **`break`**: Exits the loop immediately.
 - **`continue`**: Skips to the next iteration.
 - **`pass`**: Does nothing (placeholder).
-
-**Try this:**
-- Write a loop that prints numbers 0 to 9, but skips 4 and stops entirely if it reaches 7. What do you expect the output to be?
