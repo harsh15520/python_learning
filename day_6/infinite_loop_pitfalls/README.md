@@ -10,7 +10,7 @@ Infinite loops are a powerful tool in Python, but they can easily become a sourc
       if exit_condition:
           break
   ```
-- **Pitfall:** If the `break` statement is missing or unreachable, the loop will run forever.[1][2][5]
+- **Pitfall:** If the `break` statement is missing or unreachable, the loop will run forever.
 - **Example:**
   ```python
   while True:
@@ -45,11 +45,11 @@ Infinite loops are a powerful tool in Python, but they can easily become a sourc
       print('Hello, world.')
       # spam = spam + 1  # If missing, loop is infinite
   ```
-  Always ensure your condition variable changes so the loop can end.[3][5]
+  Always ensure your condition variable changes so the loop can end.
 
 ## 4. **Recursive Infinite Loops**
 - Recursive functions without a base case can act like infinite loops, eventually causing a crash or `RecursionError`.
 - Always include a clear exit condition in recursive functions.
 
 ## 5. **How to Stop an Infinite Loop**
-- If you get stuck in an infinite loop during development, press **Ctrl+C** in your terminal to force-stop the program.[5][3]
+- If you get stuck in an infinite loop during development, press **Ctrl+C** in your terminal to force-stop the program.
