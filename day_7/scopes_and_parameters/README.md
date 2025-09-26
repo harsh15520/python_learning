@@ -14,7 +14,7 @@ Understanding **variable scope** in Python is crucial for writing clear, bug-fre
   greet()
   print(message)  # Error: message is not defined
   ```
-- **Key Point:** Local variables are created when the function is called and destroyed when it ends.[2][3][4][5][6]
+- **Key Point:** Local variables are created when the function is called and destroyed when it ends.
 
 ***
 
@@ -28,7 +28,7 @@ Understanding **variable scope** in Python is crucial for writing clear, bug-fre
   greet()
   print('Outside function:', message)
   ```
-- **Key Point:** Global variables persist for the entire program and are accessible from any scope.[3][4][5][6][2]
+- **Key Point:** Global variables persist for the entire program and are accessible from any scope.
 
 ***
 
@@ -45,7 +45,7 @@ Understanding **variable scope** in Python is crucial for writing clear, bug-fre
   print(a)  # 3
   ```
 ## 4. **The `nonlocal` Keyword in Python**
-- The `nonlocal` keyword is used **inside nested functions** to modify a variable from the nearest enclosing (but non-global) scope.[1][2][3][6][7]
+- The `nonlocal` keyword is used **inside nested functions** to modify a variable from the nearest enclosing (but non-global) scope.
 - This is useful when you want an inner function to update a variable defined in its outer function, rather than creating a new local variable or modifying a global one.
 
 **Example:**
