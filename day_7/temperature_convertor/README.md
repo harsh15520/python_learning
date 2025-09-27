@@ -47,8 +47,7 @@ else:
 
 ## 3. **Advanced: Universal Temperature Converter Function**
 
-This function handles all conversions between Celsius, Fahrenheit, and Kelvin, using the correct formula for each case.[2][3][5][6][7][9][1]
-
+This function handles all conversions between Celsius, Fahrenheit, and Kelvin, using the correct formula for each case.
 ```python
 def convert_temperature(value: float, from_unit: str, to_unit: str) -> float:
     """
