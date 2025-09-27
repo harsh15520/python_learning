@@ -57,17 +57,17 @@
 ## Why Use Type Hints and Comments in Python?
 
 ### **Type Hints**
-Type hints (like `a: int, b: int -> int`) clarify what types your function expects and returns. They act as a form of documentation, making your code easier to read and understand for both humans and tools.[2][5][6]
+Type hints (like `a: int, b: int -> int`) clarify what types your function expects and returns. They act as a form of documentation, making your code easier to read and understand for both humans and tools.
 
 **Benefits:**
-- **Improved readability:** Type hints show at a glance what types are expected, making code easier to follow.[5][7][2]
-- **Error detection:** Static analysis tools (like `mypy` or `pyright`) use type hints to catch type-related bugs before runtime.[6][8][2]
-- **Better IDE support:** Many editors use type hints for code completion, navigation, and refactoring.[8][9][2]
-- **Facilitates teamwork:** In large projects, type hints help developers understand data flow and function contracts.[2][5]
+- **Improved readability:** Type hints show at a glance what types are expected, making code easier to follow.
+- **Error detection:** Static analysis tools (like `mypy` or `pyright`) use type hints to catch type-related bugs before runtime.
+- **Better IDE support:** Many editors use type hints for code completion, navigation, and refactoring.
+- **Facilitates teamwork:** In large projects, type hints help developers understand data flow and function contracts.
 
 **Limitations:**
-- **Not enforced at runtime:** Type hints are only hints; Python does not raise errors if types don't match.[3][7][2]
-- **May be overkill for small scripts:** For simple code, type hints can add unnecessary complexity.[6][2]
+- **Not enforced at runtime:** Type hints are only hints; Python does not raise errors if types don't match.
+- **May be overkill for small scripts:** For simple code, type hints can add unnecessary complexity.
 
 **Example:**
 ```python
@@ -94,6 +94,6 @@ def factorial(n: int) -> int:
 ```
 
 ### **Summary**
-- **Type hints** make code more readable, help catch errors early, and improve tooling, but are not enforced at runtime.[5][2][6]
+- **Type hints** make code more readable, help catch errors early, and improve tooling, but are not enforced at runtime.
 - **Comments** explain the reasoning behind code, especially for complex logic.
 - **Docstrings** describe what a function does; **comments** explain how it does it.
