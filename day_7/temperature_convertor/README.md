@@ -1,9 +1,3 @@
-# Temperature Converter: Basic to Advanced
-
-Let's build temperature converters in Python, starting from the most basic (single formula) to a fully flexible, multi-unit converter. We'll use the standard formulas for Celsius, Fahrenheit, and Kelvin conversions, as found in reliable sources.[1][2][3][5][6][7][9]
-
-***
-
 ## 1. **Basic: Celsius to Fahrenheit**
 
 ```python
