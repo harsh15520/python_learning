@@ -64,7 +64,7 @@ print(unique_list)  # Output: ['a', 'b', 'c']
    ```
 
 ### **Why Use This Method?**
-- **Order is preserved:** The first occurrence of each item is kept, later duplicates are ignored.[1][3][6][7][8]
+- **Order is preserved:** The first occurrence of each item is kept, later duplicates are ignored.
 - **Efficient:** Much faster than looping with `if item not in ...` for large lists.
 - **Concise:** One line of code.
 
