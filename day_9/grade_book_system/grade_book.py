@@ -41,11 +41,57 @@ class Student:
             data[student] = {}
         
         # Update with new subjects only (preserve existing)
-        data[student].update({subject: grade for subject, grade in subject_list.items() 
-                            if subject not in data[student]})
+        data[student].update({subject: grade for subject, grade in subject_list.items()})
         
         print(f'{student} added/updated successfully')
-    
+    @staticmethod
+    def bulk_student_registration(data):
+        student_count=0
+        Default_grade='D'
+        while(True):
+            student=input("enter name of student or done to stop").strip()
+            if student.lower()=='done':
+                break
+            if not (student):
+                print("--student name cannot be empty--")
+                continue
+            if student in data:
+                print(f"{student} already present")
+                continue
+            else:
+                student_count+=1
+                subject=input("enter name of subjects seperated by commma").strip()
+                if not subject:
+                    print("--subject name cannot be empty--")
+                    continue
+                else:
+                    subjects = [s.strip() for s in subject.split(',')]
+                    data[student]=dict.fromkeys(subjects,Default_grade)
+                    print(f'for {student} ,{subjects} these subjects are added')
+        print(f"total number of registrations are:{student_count}")
+    @staticmethod
+    def remove(data):
+        response=input("want to remove student/subject:\n").strip()
+        if response.lower()=='student':
+            student=input("enter name of student:\n").strip()
+            data.pop(student,None)
+        elif response.lower()=='subject':
+            subjects=input('enter subjects seperated by commas').strip()
+            subject=[s.strip() for s in subjects.split(',')]
+            subject_response=input('remove from all students(Y)/from specific student(N),reply:Y/N :\n')
+            if(subject_response.upper()=='Y'):
+                for student in data:
+                    for single_subject in subject:
+                        data[student].pop(single_subject,None)
+            elif(subject_response.upper()=='N'):
+                student_name=input('enter student name:\n')
+                for single_subject in subject:
+                    data[student_name].pop(single_subject,None)
+            else:
+                return "--invalid selection--"
+        else:
+            return "--invalid selection--"
+
     @staticmethod
     def average_grade(data: dict[str, dict]):
         """Calculate average grade for a student"""
@@ -89,7 +135,9 @@ while True:
     print('1) View records')
     print('2) Add record')
     print('3) Calculate average grade')
-    print('4) Exit')
+    print('4) Bulk student registration')
+    print('5) remove student/subject')
+    print('6) exit')
     
     try:
         choose_number = int(input('Enter your choice: '))
@@ -101,7 +149,11 @@ while True:
         elif choose_number == 3:
             Student.average_grade(records)  # Only pass records
         elif choose_number == 4:
-            print('Exiting...')
+            Student.bulk_student_registration(records)
+        elif choose_number == 5:
+            Student.remove(records)
+        elif choose_number == 6:
+            print("exit")
             break
         else:
             print('Invalid choice')
